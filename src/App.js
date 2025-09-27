@@ -43,7 +43,7 @@ function App() {
       {!sessionId ? (
         <SessionSetup onStart={handleStart} />
       ) : (
-        <div className="flex flex-col w-full max-w-3xl bg-gray-50 rounded-lg shadow">
+        <div className="flex flex-col w-full max-w-3xl bg-[#FAF8F1] rounded-lg shadow">
           <ChatUI messages={messages} />
           <div className="p-4 border-t flex">
             <input
@@ -60,7 +60,7 @@ function App() {
                 handleAnswer(input.value);
                 input.value = "";
               }}
-              className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded"
+              className="bg-[#234C6A] hover:bg-[#234C6A] text-white px-4 py-2 rounded"
             >
               Send
             </button>

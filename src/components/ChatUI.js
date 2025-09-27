@@ -4,9 +4,9 @@ import userImg from "../assets/user.jpg";
 
 export default function ChatUI({ messages }) {
   return (
-    <div className="flex flex-col h-[88vh] bg-purple-100">
+    <div className="flex flex-col h-[88vh] bg-[#FAF8F1]">
       {/* Header */}
-      <div className="p-4 bg-purple-600 text-white font-bold text-xl shadow">
+      <div className="p-4 bg-[#1B3C53] text-white font-bold text-xl shadow">
         AI Interview Coach
       </div>
 
@@ -29,8 +29,8 @@ export default function ChatUI({ messages }) {
             <div
               className={`px-4 py-2 rounded-2xl max-w-lg ${
                 msg.sender === "user"
-                  ? "bg-purple-500 text-white rounded-br-none"
-                  : "bg-purple-300 text-white rounded-bl-none"
+                  ? "bg-[#234C6A] text-white rounded-br-none"
+                  : "bg-[#456882] text-white rounded-bl-none"
               }`}
             >
               <p className="text-sm">{msg.text}</p>
