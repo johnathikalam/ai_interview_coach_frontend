@@ -65,5 +65,6 @@ The app will open at: http://localhost:3000
 - AI feedback rendered with Markdown  
 
 ---
-## Frontend Repository:
-[AI Interview Coach – React Frontend](https://github.com/your-username/ai_interview_coach_frontend)
+
+## Backend Repository
+[AI Interview Coach – FastAPI Backend](https://github.com/johnathikalam/ai_interview_coach)
