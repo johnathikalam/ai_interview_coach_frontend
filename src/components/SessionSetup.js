@@ -3,12 +3,13 @@ import { useState } from "react";
 export default function SessionSetup({ onStart }) {
   const [role, setRole] = useState("AI/ML Engineer");
   const [difficulty, setDifficulty] = useState("medium");
+  const [numQuestions, setNumQuestions] = useState(5);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    await onStart(role, difficulty);
+    await onStart(role, difficulty, numQuestions);
     setLoading(false);
   };
 
@@ -37,13 +38,24 @@ export default function SessionSetup({ onStart }) {
         <option value="hard">Hard</option>
       </select>
 
+
+      <label className="block mb-2 font-semibold">Number of Questions:</label>
+      <input
+        type="number"
+        min="1"
+        max="20"
+        value={numQuestions}
+        onChange={(e) => setNumQuestions(Number(e.target.value))}
+        className="border p-2 w-full rounded mb-6"
+      />
+
       <button
         type="submit"
         disabled={loading}
         className={`w-full py-2 rounded text-white ${
           loading
-            ? "bg-purple-400 cursor-not-allowed"
-            : "bg-purple-500 hover:bg-purple-600"
+            ? "bg-[#456882] cursor-not-allowed"
+            : "bg-[#456882] hover:bg-[#234C6A]"
         }`}
       >
         {loading ? "Starting..." : "Start"}
@@ -52,7 +64,7 @@ export default function SessionSetup({ onStart }) {
       {/* Loading bar */}
       {loading && (
         <div className="w-full h-1 bg-gray-200 mt-2 rounded overflow-hidden">
-          <div className="h-1 bg-purple-500 animate-pulse w-3/4"></div>
+          <div className="h-1 bg-[#234C6A] animate-pulse w-3/4"></div>
         </div>
       )}
     </form>

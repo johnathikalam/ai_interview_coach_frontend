@@ -4,7 +4,7 @@ import userImg from "../assets/user.jpg";
 
 export default function ChatUI({ messages }) {
   return (
-    <div className="flex flex-col h-[88vh] bg-[#FAF8F1]">
+    <div className="flex flex-col h-[88vh] bg-[#FFFFFF]">
       {/* Header */}
       <div className="p-4 bg-[#1B3C53] text-white font-bold text-xl shadow">
         AI Interview Coach

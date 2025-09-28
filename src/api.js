@@ -25,3 +25,10 @@ export const getHistory = async (sessionId) => {
   });
   return res.data;
 };
+
+export const getSummary = async (sessionId) => {
+  const res = await axios.post(`${API_BASE}/get_summary`, {
+    session_id: sessionId,
+  });
+  return res.data;
+};
