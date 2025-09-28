@@ -11,6 +11,7 @@ It connects to the **FastAPI backend** and allows users to:
 - View a final report with total score, average score, and improvement suggestions
 
 ---
+![Demo](src\assets\ai_coach.gif)
 
 ## Tech Stack
 - React (with hooks)
